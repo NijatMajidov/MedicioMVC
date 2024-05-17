@@ -1,0 +1,26 @@
+﻿@model Doctor
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" style="color:red"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Surname" class="form-label">Surname</label>
+            <input asp-for="Surname" class="form-control" />
+            <span asp-validation-for="Surname" style="color:red"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Position" class="form-label">Position</label>
+            <input asp-for="Position" class="form-control" />
+            <span asp-validation-for="Position" style="color:red"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ImgFile" class="form-label">Image File</label>
+            <input asp-for="ImgFile" class="form-control" />
+            <span asp-validation-for="ImgFile" style="color:red"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
