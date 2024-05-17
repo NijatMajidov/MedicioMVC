@@ -71,6 +71,10 @@ namespace MedicioMVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginDto loginDto, string? returnUrl = null)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             var user = await _userManager.FindByNameAsync(loginDto.EmailOrUserName);
             if (user == null)
             {
